@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 var config      = require('../config');
 var htmlhint    = require('gulp-htmlhint');
 var gitStaged   = require("gulp-git-staged");
-var sassLint    = require('gulp-sass-lint')
+var sassLint    = require('gulp-sass-lint');
 var prettier    = require('gulp-prettier');
 var git         = require('gulp-git');
 
