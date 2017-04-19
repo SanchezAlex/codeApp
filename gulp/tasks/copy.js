@@ -34,13 +34,22 @@ gulp.task('copy:img', function() {
         .pipe(gulp.dest(config.dest.img));
 });
 
+
+gulp.task('copy:favicon', function () {
+   return gulp
+       .src(config.src.root + '/**/*.ico*')
+       .pipe(gulp.dest(config.dest.root));
+});
+
 gulp.task('copy', [
     'copy:img',
     // 'copy:rootfiles',
     // 'copy:lib',
+    // 'copy:cssFiles',
+    'copy:jsFiles',
     'copy:fonts',
-    'copy:cssFiles',
-    'copy:jsFiles'
+    'copy:favicon'
+
 ]);
 gulp.task('copy:watch', function() {
     gulp.watch(config.src.img+'/*', ['copy']);

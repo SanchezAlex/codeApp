@@ -1,27 +1,30 @@
-<!-- -&#45;&#45;-->
-<!--title: Index page-->
-<!-- -&#45;&#45;-->
-<!--{% extends "layouts/_layout.html" %}-->
+      ---
+title: Index page
+      ---
+{% extends "layouts/_layout.html" %}
 
-<!--{% block content %}-->
-	<!---->
-	<!--{# variable example #}-->
-	<!--<h1>{{title}}</h1>-->
+{% block content %}
 
-	<!---->
-	<!--{# partial example #}-->
-	<!--{% include "partials/_header.html" %}-->
+	{# variable example #}
+	{# <h1>{{title}}</h1> #}
 
-	<!--{# mixin example #}-->
+
+	{# partial example #}
+
+     {% include "partials/_header.html" %}
+     {% include "partials/_main_content.html" %}
+
+
+     <!--{# mixin example #}-->
 	<!--{{mixins.icon('facebook')}}-->
 
 
 	<!--{# data usage example #}-->
 		<!--{% import "data/data.html" as tests %}-->
-		<!---->
+
 		<!--{% for test in tests.list %}-->
 		<!--<li>{{test.title}}</li>-->
 		<!--{% endfor %}-->
 	<!--{# end of example #}-->
 
-<!--{% endblock %}-->
+{% endblock %}
